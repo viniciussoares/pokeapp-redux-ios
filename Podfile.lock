@@ -1,0 +1,93 @@
+PODS:
+  - Apollo (0.9.0):
+    - Apollo/Core (= 0.9.0)
+  - Apollo/Core (0.9.0)
+  - Dollar (7.1.0)
+  - Kingfisher (4.8.0)
+  - Layout (0.6.27):
+    - Layout/Core (= 0.6.27)
+  - Layout/Core (0.6.27)
+  - MaterialComponents/ActivityIndicator (56.0.0):
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+    - MotionAnimator (~> 2.0)
+  - MaterialComponents/Palettes (56.0.0)
+  - MaterialComponents/private/Application (56.0.0)
+  - MDFInternationalization (1.0.4)
+  - MotionAnimator (2.8.1):
+    - MotionInterchange (~> 1.6)
+  - MotionInterchange (1.6.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - ReSwift (4.0.1)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - Sourcery (0.13.1)
+  - SwiftLint (0.26.0)
+  - SwiftyColor (1.0.0)
+  - Swinject (2.4.1)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
+
+DEPENDENCIES:
+  - Apollo
+  - Dollar
+  - Kingfisher
+  - Layout
+  - MaterialComponents/ActivityIndicator
+  - R.swift
+  - ReSwift
+  - RxCocoa
+  - RxSwift
+  - Sourcery
+  - SwiftLint
+  - SwiftyColor
+  - Swinject
+  - UICollectionViewLeftAlignedLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - Dollar
+    - Kingfisher
+    - Layout
+    - MaterialComponents
+    - MDFInternationalization
+    - MotionAnimator
+    - MotionInterchange
+    - R.swift
+    - R.swift.Library
+    - ReSwift
+    - RxCocoa
+    - RxSwift
+    - Sourcery
+    - SwiftLint
+    - SwiftyColor
+    - Swinject
+    - UICollectionViewLeftAlignedLayout
+
+SPEC CHECKSUMS:
+  Apollo: eb307e71d1db78fe92cb1936c0611aa0cbc2293b
+  Dollar: dc69a2997fa5df12ae7a91fec897963664c26750
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  Layout: 3f0863cf53ecae3d128b74e5b4040d29ee9512ea
+  MaterialComponents: e4edce947dba33f9c4dd14c34024602999afcbed
+  MDFInternationalization: e355b0cebecf53d60233bd267084e49366c82513
+  MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
+  MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  Sourcery: 9ef51b8777516f204d82996441f293813158d0d7
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  SwiftyColor: 7fa09db14051bc5d7f539e1c4576665975225992
+  Swinject: f7f15a9672e99328c1f07f277091087917215700
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
+
+PODFILE CHECKSUM: 22f560c1f7473e631cac7fd983f3b89f4bf8ca99
+
+COCOAPODS: 1.5.3

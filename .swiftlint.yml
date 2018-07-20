@@ -1,0 +1,12 @@
+excluded:
+  - Build
+  - Pods
+  - Carthage
+  - App/Lib/Generated/
+  - Services/Lib/Generated/
+
+identifier_name:
+  excluded:
+    - id
+    - rx
+    - to
