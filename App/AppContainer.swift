@@ -15,6 +15,9 @@ final class AppContainer {
 
         container.register(AppStore.self) { _ in AppStore(reducer: appReducer, state: nil) }
             .inObjectScope(.container)
+
+        container.register(AppNavigationType.self) { _ in AppNavigation() }
+            .inObjectScope(.container)
     }
 
 }
