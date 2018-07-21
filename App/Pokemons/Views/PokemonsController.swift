@@ -3,8 +3,8 @@ import UIKit
 final class PokemonsController: LayoutController {
     override var layout: File { return R.file.pokemonsControllerXml }
 
-    let actions = PokemonsActions()
-    let selectors = PokemonsSelectors()
+    lazy var actions = PokemonsActions()
+    lazy var selectors = PokemonsSelectors()
 
     override func layoutDidLoad() {
         bag << selectors.observePokemons().subscribeNext {
@@ -19,6 +19,6 @@ final class PokemonsController: LayoutController {
             debugPrint("Error: \($0)")
         }
 
-        bag << actions.getPokemons()
+        actions.getPokemons()
     }
 }
