@@ -1,13 +1,11 @@
 import UIKit
 import ReSwift
 
-let store: Store<AppState> = Store<AppState>(reducer: appReducer, state: nil)
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    let navigationController = UINavigationController()
+    let appContainer = AppContainer()
 
     func application(
         _ application: UIApplication,
@@ -18,11 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initMainScreen() {
+        let navigationController = appContainer.resolve(UINavigationController.self)
+        navigationController.isNavigationBarHidden = true
+
         window = UIWindow()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-
-        navigationController.isNavigationBarHidden = true
 
         let pokemonsController = PokemonsController()
         navigationController.viewControllers = [pokemonsController]

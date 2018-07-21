@@ -14,17 +14,6 @@ extension Store {
             }
         }
     }
-
-    func observe<T>(_ block: @escaping ((State) -> T)) -> Observable<T> {
-        return asObservable()
-            .map { block($0) }
-    }
-
-    func observePure<T: Equatable>(_ block: @escaping ((State) -> T)) -> Observable<T> {
-        return asObservable()
-            .map { block($0) }
-            .distinctUntilChanged()
-    }
 }
 
 private class RxStoreSubscriber<State> : StoreSubscriber {

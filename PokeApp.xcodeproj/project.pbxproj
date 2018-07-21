@@ -12,6 +12,8 @@
 		81686DE7210163EC00B11DAB /* PokemonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE6210163EC00B11DAB /* PokemonsController.swift */; };
 		81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81686DEB210163EC00B11DAB /* Assets.xcassets */; };
 		81686DEF210163EC00B11DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81686DED210163EC00B11DAB /* LaunchScreen.storyboard */; };
+		817ECA1E2103CE0800E20A22 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817ECA1D2103CE0800E20A22 /* AppContainer.swift */; };
+		817ECA202103D28400E20A22 /* AppContainer+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817ECA1F2103D28400E20A22 /* AppContainer+UIKit.swift */; };
 		81E491F021016A440025C44F /* ReSwift+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491EF21016A440025C44F /* ReSwift+Rx.swift */; };
 		81E491FE210170250025C44F /* PokemonsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491FD210170250025C44F /* PokemonsActions.swift */; };
 		81E49200210170B50025C44F /* PokemonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E491FF210170B50025C44F /* PokemonsState.swift */; };
@@ -74,6 +76,8 @@
 		81686DEB210163EC00B11DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81686DEE210163EC00B11DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81686DF0210163EC00B11DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		817ECA1D2103CE0800E20A22 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		817ECA1F2103D28400E20A22 /* AppContainer+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppContainer+UIKit.swift"; sourceTree = "<group>"; };
 		81E491EF21016A440025C44F /* ReSwift+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReSwift+Rx.swift"; sourceTree = "<group>"; };
 		81E491FD210170250025C44F /* PokemonsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsActions.swift; sourceTree = "<group>"; };
 		81E491FF210170B50025C44F /* PokemonsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsState.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				81E57023210166B3008F0467 /* Lib */,
 				81E570222101669A008F0467 /* Pokemon */,
 				81E5702021016689008F0467 /* Pokemons */,
+				817ECA1D2103CE0800E20A22 /* AppContainer.swift */,
 				81686DE4210163EC00B11DAB /* AppDelegate.swift */,
 				81E492032101744C0025C44F /* AppReducer.swift */,
 			);
@@ -195,13 +200,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		81E491F521016C410025C44F /* Injection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Injection;
 			sourceTree = "<group>";
 		};
 		81E491F821016ED90025C44F /* Lib */ = {
@@ -312,7 +310,6 @@
 				81E4920721017A860025C44F /* Layout */,
 				81E5702121016695008F0467 /* Assets */,
 				81E570302101693B008F0467 /* Ext */,
-				81E491F521016C410025C44F /* Injection */,
 				81E491F121016A930025C44F /* Router */,
 				81686DF0210163EC00B11DAB /* Info.plist */,
 			);
@@ -322,6 +319,7 @@
 		81E570302101693B008F0467 /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				817ECA1F2103D28400E20A22 /* AppContainer+UIKit.swift */,
 				81E491EF21016A440025C44F /* ReSwift+Rx.swift */,
 				81E4920821017AA90025C44F /* Rswift+File.swift */,
 				81E492292101857B0025C44F /* RxSwift+Sugar.swift */,
@@ -605,11 +603,13 @@
 				81E4922A2101857B0025C44F /* RxSwift+Sugar.swift in Sources */,
 				81E4920C21017C1E0025C44F /* LayoutExt.swift in Sources */,
 				81E49221210180C60025C44F /* AutoEquatable.generated.swift in Sources */,
+				817ECA202103D28400E20A22 /* AppContainer+UIKit.swift in Sources */,
 				81E49200210170B50025C44F /* PokemonsState.swift in Sources */,
 				81E4920F21017C7C0025C44F /* LayoutView.swift in Sources */,
 				81686DE7210163EC00B11DAB /* PokemonsController.swift in Sources */,
 				81E4921921017FFF0025C44F /* Sourcery.swift in Sources */,
 				81E491FE210170250025C44F /* PokemonsActions.swift in Sources */,
+				817ECA1E2103CE0800E20A22 /* AppContainer.swift in Sources */,
 				81E4922C2101868A0025C44F /* PokemonsActionTypes.swift in Sources */,
 				81E4921721017DD60025C44F /* R.generated.swift in Sources */,
 				81E4920D21017C4D0025C44F /* Rswift+File.swift in Sources */,

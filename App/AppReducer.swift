@@ -9,3 +9,5 @@ func appReducer(action: Action, state: AppState?) -> AppState {
         pokemonsState: pokemonsReducer(action: action, state: state?.pokemonsState)
     )
 }
+
+typealias AppStore = Store<AppState>
