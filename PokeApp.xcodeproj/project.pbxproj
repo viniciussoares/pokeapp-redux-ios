@@ -40,6 +40,8 @@
 		81E57008210164C8008F0467 /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E57001210164C8008F0467 /* Services.framework */; };
 		81E57009210164C8008F0467 /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E57001210164C8008F0467 /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81E5702F210168DC008F0467 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5702E210168DC008F0467 /* Router.swift */; };
+		81FF026A2103F29800ADBB5F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF02692103F29800ADBB5F /* Navigation.swift */; };
+		81FF026C2103F30900ADBB5F /* Router+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF026B2103F30900ADBB5F /* Router+UIKit.swift */; };
 		9D45FC00DF5F289B35FF3231 /* Pods_Common_Graphql.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16505B2B493E6142C57AFD08 /* Pods_Common_Graphql.framework */; };
 		DC4CB3695B1A9C846F012398 /* Pods_Common_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A5D656CB53254F4B7678BF /* Pods_Common_Services.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +107,8 @@
 		81E57003210164C8008F0467 /* Graphql.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graphql.h; sourceTree = "<group>"; };
 		81E57004210164C8008F0467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E5702E210168DC008F0467 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		81FF02692103F29800ADBB5F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		81FF026B2103F30900ADBB5F /* Router+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+UIKit.swift"; sourceTree = "<group>"; };
 		87AAEF2CB6F704AB976FD5DF /* Pods-Common-PokeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-PokeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-PokeApp/Pods-Common-PokeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B883F0034F4F121D412E5054 /* Pods-Common-Graphql.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-Graphql.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-Graphql/Pods-Common-Graphql.debug.xcconfig"; sourceTree = "<group>"; };
 		B99726A721FBF7C4B97337F3 /* Pods-Common-Graphql.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-Graphql.release.xcconfig"; path = "Pods/Target Support Files/Pods-Common-Graphql/Pods-Common-Graphql.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				81E5702E210168DC008F0467 /* Router.swift */,
+				81FF02692103F29800ADBB5F /* Navigation.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				81E491EF21016A440025C44F /* ReSwift+Rx.swift */,
 				81E4920821017AA90025C44F /* Rswift+File.swift */,
 				81E492292101857B0025C44F /* RxSwift+Sugar.swift */,
+				81FF026B2103F30900ADBB5F /* Router+UIKit.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -620,8 +626,10 @@
 				81E4922C2101868A0025C44F /* PokemonsActionTypes.swift in Sources */,
 				81E4921721017DD60025C44F /* R.generated.swift in Sources */,
 				817ECA222103D5FB00E20A22 /* PokemonsSelectors.swift in Sources */,
+				81FF026C2103F30900ADBB5F /* Router+UIKit.swift in Sources */,
 				81E4920D21017C4D0025C44F /* Rswift+File.swift in Sources */,
 				81E49202210171E00025C44F /* PokemonsReducer.swift in Sources */,
+				81FF026A2103F29800ADBB5F /* Navigation.swift in Sources */,
 				81E5702F210168DC008F0467 /* Router.swift in Sources */,
 				81E49220210180C60025C44F /* AutoMockable.generated.swift in Sources */,
 				81E492042101744C0025C44F /* AppReducer.swift in Sources */,
