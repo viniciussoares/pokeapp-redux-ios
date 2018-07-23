@@ -1,0 +1,2 @@
+#!/bin/sh
+yarn exec apollo-codegen introspect-schema https://graphql-pokemon.now.sh/ --output ./Data/schema.json
