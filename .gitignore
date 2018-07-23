@@ -53,4 +53,4 @@ info.plist
 *.orig
 
 # GraphQL
-schema.json
+Data/schema.json
