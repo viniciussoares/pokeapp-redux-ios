@@ -13,7 +13,7 @@ abstract_target 'Common' do
   pod 'SwiftLint'
   pod 'Swinject'
 
-  target 'Services' do
+  target 'Data' do
     pod 'Apollo'
   end
 

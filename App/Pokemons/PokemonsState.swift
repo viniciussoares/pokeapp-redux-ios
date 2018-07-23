@@ -1,5 +1,5 @@
 import ReSwift
-import Services
+import Data
 
 struct PokemonsState: StateType {
     var pokemons: [Pokemon]

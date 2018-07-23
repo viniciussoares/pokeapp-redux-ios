@@ -1,6 +1,6 @@
 import ReSwift
 import RxSwift
-import Services
+import Data
 
 class PokemonsActions: ContainerProvider {
     private let bag = DisposeBag()

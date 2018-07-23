@@ -3,7 +3,7 @@ excluded:
   - Pods
   - Carthage
   - App/Lib/Generated/
-  - Services/Lib/Generated/
+  - Data/Lib/Generated/
 
 identifier_name:
   excluded:

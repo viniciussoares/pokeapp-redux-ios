@@ -1,5 +1,5 @@
 import ReSwift
-import Services
+import Data
 
 enum PokemonsActionTypes {
     struct FetchRequest: Action {}

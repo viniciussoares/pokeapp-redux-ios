@@ -1,6 +1,6 @@
 import ReSwift
 import RxSwift
-import Services
+import Data
 
 final class PokemonsSelectors: ContainerProvider {
     private lazy var store = container.resolve(AppStore.self)

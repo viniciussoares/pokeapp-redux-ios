@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "81E57000210164C8008F0467"
-               BuildableName = "Services.framework"
-               BlueprintName = "Services"
+               BuildableName = "Data.framework"
+               BlueprintName = "Data"
                ReferencedContainer = "container:PokeApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81E57000210164C8008F0467"
-            BuildableName = "Services.framework"
-            BlueprintName = "Services"
+            BuildableName = "Data.framework"
+            BlueprintName = "Data"
             ReferencedContainer = "container:PokeApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "81E57000210164C8008F0467"
-            BuildableName = "Services.framework"
-            BlueprintName = "Services"
+            BuildableName = "Data.framework"
+            BlueprintName = "Data"
             ReferencedContainer = "container:PokeApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
