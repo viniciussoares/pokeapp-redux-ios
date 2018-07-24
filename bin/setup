@@ -4,10 +4,10 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 CLEAR='\033[0m'
 
-printf "[1/2] 🚚  Installing cocoapods packages...\n\n"
+printf "\n[1/2] 🚚  Installing cocoapods packages...\n\n"
 bundle exec pod install
 
-printf "\n[2/2] 📄  Updating graphql schema...\n\n"
-./update-schema
+printf "\n[2/2] 📄  Download GraphQL schema...\n\n"
+yarn download-schema
 
 printf "\n${GREEN}success${CLEAR}n"

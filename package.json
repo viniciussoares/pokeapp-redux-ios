@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "apollo": "^1.5.0"
+  },
+  "scripts": {
+    "download-schema": "apollo schema:download ./Data/schema.json --endpoint https://graphql-pokemon.now.sh"
   }
 }
