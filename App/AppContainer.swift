@@ -1,5 +1,6 @@
 import Swinject
 import ReSwift
+import Data
 
 final class AppContainer {
     fileprivate let container = Container()
@@ -17,6 +18,9 @@ final class AppContainer {
             .inObjectScope(.container)
 
         container.register(Router.self) { _ in DefaultRouter(appNavigation: AppNavigation()) }
+            .inObjectScope(.container)
+
+        container.register(PokemonRepository.self) { _ in DefaultPokemonRepository() }
             .inObjectScope(.container)
     }
 
