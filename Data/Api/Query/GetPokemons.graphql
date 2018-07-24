@@ -1,0 +1,8 @@
+query GetPokemons {
+    pokemons(first: 150) {
+        id
+        number
+        name
+        image
+    }
+}

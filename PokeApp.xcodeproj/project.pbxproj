@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43DC75EB819579C6250DF9A2 /* Pods_Common_Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD0B124753284A0D6F7BD2E /* Pods_Common_Data.framework */; };
 		738FEA9581B02E1D57676426 /* Pods_Common_PokeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA01588C50E6F05D0C43BB03 /* Pods_Common_PokeApp.framework */; };
+		8112F5132106AF5B00538AF6 /* GraphlApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112F5122106AF5B00538AF6 /* GraphlApi.swift */; };
 		81686DE5210163EC00B11DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE4210163EC00B11DAB /* AppDelegate.swift */; };
 		81686DE7210163EC00B11DAB /* PokemonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE6210163EC00B11DAB /* PokemonsController.swift */; };
 		81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81686DEB210163EC00B11DAB /* Assets.xcassets */; };
@@ -74,6 +75,8 @@
 		2FDBA3FE50CD85FFE0BCBBAF /* Pods-Common-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-Data.release.xcconfig"; path = "Pods/Target Support Files/Pods-Common-Data/Pods-Common-Data.release.xcconfig"; sourceTree = "<group>"; };
 		3916FB01C44273D10A494AE3 /* Pods-Common-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-Services.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-Services/Pods-Common-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		7F179C0672154C5FBAC12DB0 /* Pods-Common-PokeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-PokeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Common-PokeApp/Pods-Common-PokeApp.release.xcconfig"; sourceTree = "<group>"; };
+		8112F5112106AF3100538AF6 /* GetPokemons.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetPokemons.graphql; sourceTree = "<group>"; };
+		8112F5122106AF5B00538AF6 /* GraphlApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphlApi.swift; sourceTree = "<group>"; };
 		81686DE1210163EC00B11DAB /* PokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81686DE4210163EC00B11DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81686DE6210163EC00B11DAB /* PokemonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsController.swift; sourceTree = "<group>"; };
@@ -153,6 +156,14 @@
 				2FDBA3FE50CD85FFE0BCBBAF /* Pods-Common-Data.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8112F5152106AFB800538AF6 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				81E491FA21016EF70025C44F /* Query */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		81686DD8210163EC00B11DAB = {
@@ -236,6 +247,7 @@
 		81E491FA21016EF70025C44F /* Query */ = {
 			isa = PBXGroup;
 			children = (
+				8112F5112106AF3100538AF6 /* GetPokemons.graphql */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -265,6 +277,7 @@
 			children = (
 				81E49223210180D90025C44F /* AutoEquatable.generated.swift */,
 				81E49222210180D90025C44F /* AutoMockable.generated.swift */,
+				8112F5122106AF5B00538AF6 /* GraphlApi.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -272,9 +285,9 @@
 		81E57002210164C8008F0467 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8112F5152106AFB800538AF6 /* Api */,
 				81E491F821016ED90025C44F /* Lib */,
 				81E491F921016EDE0025C44F /* Model */,
-				81E491FA21016EF70025C44F /* Query */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -396,6 +409,7 @@
 			buildConfigurationList = 81E5700A210164C8008F0467 /* Build configuration list for PBXNativeTarget "Data" */;
 			buildPhases = (
 				259BF7E5D608A3F9B9A1437B /* [CP] Check Pods Manifest.lock */,
+				8112F5142106AF7600538AF6 /* Generate GraphQL */,
 				81E4921D210180770025C44F /* Sourcery */,
 				81E56FFC210164C8008F0467 /* Sources */,
 				81E56FFD210164C8008F0467 /* Frameworks */,
@@ -505,6 +519,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8112F5142106AF7600538AF6 /* Generate GraphQL */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate GraphQL";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}\"\nyarn generate-api";
 		};
 		81E491F221016B8E0025C44F /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -647,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E49206210176BF0025C44F /* Pokemon.swift in Sources */,
+				8112F5132106AF5B00538AF6 /* GraphlApi.swift in Sources */,
 				81E4921A210180420025C44F /* Sourcery.swift in Sources */,
 				81E49225210180D90025C44F /* AutoEquatable.generated.swift in Sources */,
 				81E49224210180D90025C44F /* AutoMockable.generated.swift in Sources */,

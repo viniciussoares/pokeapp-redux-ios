@@ -3,6 +3,7 @@
     "apollo": "^1.5.0"
   },
   "scripts": {
-    "download-schema": "apollo schema:download ./Data/schema.json --endpoint https://graphql-pokemon.now.sh"
+    "download-schema": "apollo schema:download ./Data/schema.json --endpoint https://graphql-pokemon.now.sh",
+    "generate-api": "apollo codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=Data/schema.json Data/Lib/Generated/GraphlApi.swift"
   }
 }
