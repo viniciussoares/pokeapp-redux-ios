@@ -10,7 +10,7 @@ class PokemonsActions: ContainerProvider {
     private lazy var repository = container.resolve(PokemonRepository.self)
 
     func getPokemons() {
-        if selectors.isFetching { return }
+        if selectors.state.isFetching { return }
 
         store.dispatch(PokemonsActionTypes.FetchRequest())
 

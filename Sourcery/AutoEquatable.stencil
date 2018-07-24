@@ -1,3 +1,5 @@
+import Foundation
+
 fileprivate func compareOptionals<T>(lhs: T?, rhs: T?, compare: (_ lhs: T, _ rhs: T) -> Bool) -> Bool {
     switch (lhs, rhs) {
     case let (lValue?, rValue?):
@@ -18,8 +20,22 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
     return true
 }
 
+fileprivate func compareErrors(lhs: Error?, rhs: Error?) -> Bool {
+    switch (lhs, rhs) {
+    case let (e1?, e2?):
+        let error1 = e1 as NSError
+        let error2 = e2 as NSError
+
+        return error1.domain == error2.domain && error1.code == error2.code && "\(e1)" == "\(e2)"
+    case (nil, nil):
+        return true
+    default:
+        return false
+    }
+}
+
 {% macro compareVariables variables %}
-    {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}{% if not variable.annotations.skipEquality %}guard {% if not variable.isOptional %}{% if not variable.annotations.arrayEquality %}lhs.{{ variable.name }} == rhs.{{ variable.name }}{% else %}compareArrays(lhs: lhs.{{ variable.name }}, rhs: rhs.{{ variable.name }}, compare: ==){% endif %}{% else %}compareOptionals(lhs: lhs.{{ variable.name }}, rhs: rhs.{{ variable.name }}, compare: ==){% endif %} else { return false }{% endif %}
+    {% for variable in variables where variable.readAccess != "private" and variable.readAccess != "fileprivate" %}{% if not variable.annotations.skipEquality %}guard {% if variable.typeName.unwrappedTypeName == "Error" %}compareErrors(lhs: lhs.{{ variable.name }}, rhs: rhs.{{ variable.name }}) else { return false }{% else %}{% if not variable.isOptional %}{% if not variable.annotations.arrayEquality %}lhs.{{ variable.name }} == rhs.{{ variable.name }}{% else %}compareArrays(lhs: lhs.{{ variable.name }}, rhs: rhs.{{ variable.name }}, compare: ==){% endif %}{% else %}compareOptionals(lhs: lhs.{{ variable.name }}, rhs: rhs.{{ variable.name }}, compare: ==){% endif %} else { return false }{% endif %}{% endif %}
     {% endfor %}
 {% endmacro %}
 

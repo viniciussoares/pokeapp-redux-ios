@@ -8,16 +8,8 @@ final class PokemonsController: LayoutController {
     lazy var selectors = PokemonsSelectors()
 
     override func layoutDidLoad() {
-        bag << selectors.observePokemons().subscribeNext {
-            debugPrint("Pokemons: \($0)")
-        }
-
-        bag << selectors.observeIsFetching().subscribeNext {
-            debugPrint("IsFetching: \($0)")
-        }
-
-        bag << selectors.observeError().subscribeNext {
-            debugPrint("Error: \($0)")
+        bag << selectors.observe().subscribeNext {
+            _ = $0
         }
 
         actions.getPokemons()
