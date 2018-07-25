@@ -4,20 +4,23 @@
 
         <UILabel
             bottom="100%"
-            font="semibold 16"
+            font="regular 18"
             text="{pokemon.name}"
             textAlignment="center"
-            textColor="#696969"
+            textColor="#3C59A5"
             numberOfLines="0"
             width="100%" />
 
-        <UIView
-             backgroundColor="white"
-             center.x="parent.center.x"
-             layer.cornerRadius="height / 2"
-             top="0"
-             bottom="previous.top - 4"
-             width="height" />
+        <ImageView
+            backgroundColor="white"
+            bottom="previous.top - 4"
+            center.x="parent.center.x"
+            url="{pokemon.image}"
+            layer.borderColor="#E3E3E3"
+            layer.borderWidth="2"
+            layer.cornerRadius="height / 2"
+            top="0"
+            width="height" />
 
     </UIView>
 
