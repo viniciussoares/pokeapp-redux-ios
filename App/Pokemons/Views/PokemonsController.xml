@@ -1,8 +1,10 @@
 <BackdropView>
 
+    <NavigationBar title="Pokémon" />
+
     <UICollectionView
         backgroundColor="clear"
-        top="0"
+        top="previous.bottom"
         bottom="parent.bottom"
         outlet="collectionView" />
 

@@ -12,9 +12,39 @@ PODS:
     - MaterialComponents/private/Application
     - MDFInternationalization
     - MotionAnimator (~> 2.0)
+  - MaterialComponents/ButtonBar (56.0.0):
+    - MaterialComponents/Buttons
+    - MDFInternationalization
+  - MaterialComponents/Buttons (56.0.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (56.0.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/NavigationBar (56.0.0):
+    - MaterialComponents/ButtonBar
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
   - MaterialComponents/Palettes (56.0.0)
   - MaterialComponents/private/Application (56.0.0)
+  - MaterialComponents/private/Math (56.0.0)
+  - MaterialComponents/private/Shapes (56.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (56.0.0)
+  - MaterialComponents/ShadowLayer (56.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (56.0.0):
+    - MaterialComponents/private/Application
   - MDFInternationalization (1.0.4)
+  - MDFTextAccessibility (1.2.0)
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
@@ -37,6 +67,7 @@ DEPENDENCIES:
   - Kingfisher
   - Layout
   - MaterialComponents/ActivityIndicator
+  - MaterialComponents/NavigationBar
   - R.swift
   - ReSwift
   - RxCocoa
@@ -55,6 +86,7 @@ SPEC REPOS:
     - Layout
     - MaterialComponents
     - MDFInternationalization
+    - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
     - R.swift
@@ -75,6 +107,7 @@ SPEC CHECKSUMS:
   Layout: 3f0863cf53ecae3d128b74e5b4040d29ee9512ea
   MaterialComponents: e4edce947dba33f9c4dd14c34024602999afcbed
   MDFInternationalization: e355b0cebecf53d60233bd267084e49366c82513
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
@@ -88,6 +121,6 @@ SPEC CHECKSUMS:
   Swinject: f7f15a9672e99328c1f07f277091087917215700
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: fc44e470a552160f42871efb3e9f5e4ce5719373
+PODFILE CHECKSUM: c7bc696c702211e82716c61e6bcbbdc7d24b9708
 
 COCOAPODS: 1.5.3
