@@ -17,3 +17,20 @@ extension LayoutLoading {
         layoutNode?.setState(newState, animated: animated)
     }
 }
+
+extension UICollectionView {
+    func registerLayout(file: File) {
+        registerLayout(named: file.name, forCellReuseIdentifier: file.name)
+    }
+
+    func dequeueCellData<Cell: UICollectionViewCell>(
+        file: File, indexPath: IndexPath
+    ) -> (cell: Cell, node: LayoutNode) {
+        let node = dequeueReusableCellNode(withIdentifier: file.name, for: indexPath)
+
+        //swiftlint:disable:next force_cast
+        let cell = node.view as! Cell
+
+        return (cell, node)
+    }
+}

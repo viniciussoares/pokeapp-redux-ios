@@ -1,2 +1,8 @@
 <BackdropView>
+
+    <UICollectionView
+        backgroundColor="clear"
+        bottom="parent.bottom"
+        outlet="collectionView" />
+
 </BackdropView>
