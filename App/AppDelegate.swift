@@ -19,11 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = appContainer.resolve(UINavigationController.self)
         navigationController.isNavigationBarHidden = true
 
+        navigationController.viewControllers = [PokemonsController()]
+
         window = UIWindow()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
 
-        let pokemonsController = PokemonsController()
-        navigationController.viewControllers = [pokemonsController]
     }
 }

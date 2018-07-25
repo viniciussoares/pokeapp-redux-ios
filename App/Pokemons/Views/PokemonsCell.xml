@@ -1,6 +1,24 @@
 <PokemonsCell>
 
     <UIView left="8" top="8" right="100% - 8" bottom="100% - 8">
+
+        <UILabel
+            bottom="100%"
+            font="semibold 16"
+            text="{pokemon.name}"
+            textAlignment="center"
+            textColor="#696969"
+            numberOfLines="0"
+            width="100%" />
+
+        <UIView
+             backgroundColor="white"
+             center.x="parent.center.x"
+             layer.cornerRadius="height / 2"
+             top="0"
+             bottom="previous.top - 4"
+             width="height" />
+
     </UIView>
 
 </PokemonsCell>

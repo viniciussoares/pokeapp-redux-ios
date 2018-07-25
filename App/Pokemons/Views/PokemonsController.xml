@@ -2,6 +2,7 @@
 
     <UICollectionView
         backgroundColor="clear"
+        top="0"
         bottom="parent.bottom"
         outlet="collectionView" />
 

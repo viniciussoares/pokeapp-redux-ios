@@ -23,10 +23,10 @@ final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionV
         let screenWidth = collectionView.bounds.width - 8.0
         let rows = (screenWidth / 160.0).rounded()
         let width = screenWidth / rows
-        let height = width * 1.2
+        let height = width * 0.8
 
         layout.estimatedItemSize = CGSize(width: width, height: height)
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 0
         collectionView.collectionViewLayout = layout
 
@@ -46,6 +46,15 @@ final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionV
     ) -> UICollectionViewCell {
         let (cell, node) = collectionView.dequeueCellData(file: R.file.pokemonsCellXml, indexPath: indexPath)
 
+        node.setState([
+            "pokemon": pokemons[indexPath.row]
+        ])
+
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pokemon = pokemons[indexPath.row]
+        collectionView.navigate(.pokemonDetail(pokemon))
     }
 }
