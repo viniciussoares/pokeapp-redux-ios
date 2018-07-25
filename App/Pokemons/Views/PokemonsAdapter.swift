@@ -21,8 +21,8 @@ final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionV
         let layout = UICollectionViewLeftAlignedLayout()
 
         let screenWidth = collectionView.bounds.width - 8.0
-        let rows = (screenWidth / 160.0).rounded()
-        let width = screenWidth / rows
+        let rows = (screenWidth / 156.0).rounded(.down)
+        let width = (screenWidth / rows).rounded(.down)
         let height = width * 0.8
 
         layout.estimatedItemSize = CGSize(width: width, height: height)
