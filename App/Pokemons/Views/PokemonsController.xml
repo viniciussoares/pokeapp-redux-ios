@@ -8,4 +8,6 @@
         bottom="parent.bottom"
         outlet="collectionView" />
 
+    <ActivityIndicatorView outlet="activityIndicatorView" />
+
 </BackdropView>
