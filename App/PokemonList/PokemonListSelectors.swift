@@ -2,8 +2,8 @@ import ReSwift
 import RxSwift
 import Data
 
-final class PokemonListSelectors: ContainerProvider {
-    private lazy var store = container.resolve(AppStore.self)
+final class PokemonListSelectors {
+    private lazy var store = UIApplication.container.resolve(AppStore.self)!
 
     var state: PokemonListState {
         return store.state.pokemonListState

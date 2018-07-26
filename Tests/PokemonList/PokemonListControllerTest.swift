@@ -5,20 +5,13 @@ import Nimble
 @testable import Data
 
 final class PokemonListControllerTest: XCTestCase {
-    var controller: PokemonsController!
-    var actionsMock: PokemonsActionsMock!
-
-    lazy var store = controller.container.resolve(AppStore.self)
-
-    var state: AppState {
-        get { return store.state! }
-        set(newValue) { store.state = newValue }
-    }
+    var controller: PokemonListController!
+    var actionsMock: PokemonListActionsMock!
 
     override func setUp() {
         super.setUp()
-        controller = PokemonsController()
-        actionsMock = PokemonsActionsMock()
+        controller = PokemonListController()
+        actionsMock = PokemonListActionsMock()
 
         controller.actions = actionsMock
 
@@ -39,20 +32,20 @@ final class PokemonListControllerTest: XCTestCase {
     }
 
     func testInitialState() {
-        state.pokemonsState = PokemonsState()
+        state.pokemonListState = PokemonListState()
 
         expect(self.controller.activityIndicatorView.isHidden).to(beTrue())
         expect(self.controller.errorView.isHidden).to(beTrue())
     }
 
     func testShowLoading() {
-        state.pokemonsState = PokemonsState(pokemons: [], isFetching: true, error: nil)
+        state.pokemonListState = PokemonListState(pokemons: [], isFetching: true, error: nil)
 
         expect(self.controller.activityIndicatorView.isHidden).to(beFalse())
     }
 
     func testShowError() {
-        state.pokemonsState = PokemonsState(pokemons: [], isFetching: false, error: TestingError.dummy)
+        state.pokemonListState = PokemonListState(pokemons: [], isFetching: false, error: TestingError.dummy)
 
         expect(self.controller.errorView.isHidden).to(beFalse())
     }
@@ -63,7 +56,7 @@ final class PokemonListControllerTest: XCTestCase {
             Pokemon(id: "2", name: "Test 2", image: "http://www.test.com/2.jpg")
         ]
 
-        state.pokemonsState = PokemonsState(pokemons: pokemons, isFetching: false, error: nil)
+        state.pokemonListState = PokemonListState(pokemons: pokemons, isFetching: false, error: nil)
 
         let collectionView = controller.collectionView!
         let dataSource = collectionView.dataSource!
@@ -72,7 +65,7 @@ final class PokemonListControllerTest: XCTestCase {
 
         expect(
             dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row: 0, section: 0))
-        ).to(beAKindOf(PokemonsCell.self))
+        ).to(beAKindOf(PokemonListCell.self))
     }
 
     func testCallGetPokemonsActionOnStart() {

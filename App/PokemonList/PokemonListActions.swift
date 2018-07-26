@@ -6,12 +6,12 @@ protocol PokemonListActions: AutoMockable {
     func getPokemons()
 }
 
-final class DefaultPokemonListActions: PokemonListActions, ContainerProvider {
+final class DefaultPokemonListActions: PokemonListActions {
     private let bag = DisposeBag()
     private let selectors = PokemonListSelectors()
 
-    private lazy var store = container.resolve(AppStore.self)
-    private lazy var repository = container.resolve(PokemonRepository.self)
+    private lazy var store = UIApplication.container.resolve(AppStore.self)!
+    private lazy var repository = UIApplication.container.resolve(PokemonRepository.self)!
 
     func getPokemons() {
         if selectors.state.isFetching { return }
