@@ -1,7 +1,7 @@
 import ReSwift
 
 struct AppState: StateType {
-    let pokemonsState: PokemonsState
+    var pokemonsState = PokemonsState()
 }
 
 func appReducer(action: Action, state: AppState?) -> AppState {

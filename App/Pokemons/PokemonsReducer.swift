@@ -1,13 +1,7 @@
 import ReSwift
 
-private let initialState = PokemonsState(
-    pokemons: [],
-    isFetching: false,
-    error: nil
-)
-
 func pokemonsReducer(action: Action, state: PokemonsState?) -> PokemonsState {
-    var state = state ?? initialState
+    var state = state ?? PokemonsState()
 
     switch action {
     case _ as PokemonsActionTypes.FetchRequest:

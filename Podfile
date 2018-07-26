@@ -9,6 +9,7 @@ abstract_target 'Common' do
   pod 'R.swift'
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'ReSwift'
   pod 'Sourcery'
   pod 'SwiftLint'
   pod 'Swinject'
@@ -23,8 +24,11 @@ abstract_target 'Common' do
     pod 'MaterialComponents/ActivityIndicator'
     pod 'MaterialComponents/Buttons+ButtonThemer'
     pod 'MaterialComponents/NavigationBar'
-    pod 'ReSwift'
     pod 'SwiftyColor'
     pod 'UICollectionViewLeftAlignedLayout'
+  end
+
+  target 'Tests' do
+    pod 'Nimble'
   end
 end

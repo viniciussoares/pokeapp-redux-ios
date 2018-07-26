@@ -8,7 +8,7 @@ final class PokemonsController: LayoutController {
 
     private let adapter = PokemonsAdapter()
 
-    lazy var actions = PokemonsActions()
+    lazy var actions: PokemonsActions = DefaultPokemonsActions()
     lazy var selectors = PokemonsSelectors()
 
     override var layout: File {

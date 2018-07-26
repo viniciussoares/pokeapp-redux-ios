@@ -2,7 +2,11 @@ import ReSwift
 import RxSwift
 import Data
 
-class PokemonsActions: ContainerProvider {
+protocol PokemonsActions: AutoMockable {
+    func getPokemons()
+}
+
+final class DefaultPokemonsActions: PokemonsActions, ContainerProvider {
     private let bag = DisposeBag()
     private let selectors = PokemonsSelectors()
 
@@ -20,8 +24,4 @@ class PokemonsActions: ContainerProvider {
             self.store.dispatch(PokemonsActionTypes.FetchError(error: $0))
         })
     }
-}
-
-final class PokemonsActionsMock: PokemonsActions {
-    override func getPokemons() {}
 }

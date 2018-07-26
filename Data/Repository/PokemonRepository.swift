@@ -1,6 +1,6 @@
 import RxSwift
 
-public protocol PokemonRepository {
+public protocol PokemonRepository: AutoMockable {
     func getPokemons() -> Observable<[Pokemon]>
 }
 

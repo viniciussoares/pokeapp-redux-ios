@@ -5,8 +5,7 @@ import Data
 final class AppContainer {
     fileprivate let container = Container()
 
-    init(mock: Bool = false) {
-        if mock { return }
+    init() {
         registerSingletons()
     }
 
@@ -24,6 +23,9 @@ final class AppContainer {
             .inObjectScope(.container)
     }
 
+    func getInternalContainerForTesting() -> Container {
+        return container
+    }
 }
 
 extension AppContainer {

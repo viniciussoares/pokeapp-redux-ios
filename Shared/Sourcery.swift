@@ -1,7 +1,7 @@
 import Foundation
 
-protocol AutoEquatable {
+public protocol AutoEquatable {
 }
 
-protocol AutoMockable {
+public protocol AutoMockable {
 }
