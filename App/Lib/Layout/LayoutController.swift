@@ -18,6 +18,14 @@ class LayoutController: UIViewController, LayoutLoading {
         return [:]
     }
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLayout(layout, state: initialState, constants: constants)

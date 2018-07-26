@@ -1,0 +1,6 @@
+<BackdropView>
+    <NavigationBar title="Pokémon" />
+
+    <ActivityIndicatorView outlet="activityIndicatorView" />
+    <ErrorView outlet="errorView" />
+</BackdropView>
