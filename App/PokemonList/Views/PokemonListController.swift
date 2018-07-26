@@ -1,18 +1,18 @@
 import UIKit
 import Data
 
-final class PokemonsController: LayoutController {
+final class PokemonListController: LayoutController {
     @objc var collectionView: UICollectionView!
     @objc var activityIndicatorView: ActivityIndicatorView!
     @objc var errorView: ErrorView!
 
-    private let adapter = PokemonsAdapter()
+    private let adapter = PokemonListAdapter()
 
-    lazy var actions: PokemonsActions = DefaultPokemonsActions()
-    lazy var selectors = PokemonsSelectors()
+    lazy var actions: PokemonListActions = DefaultPokemonListActions()
+    lazy var selectors = PokemonListSelectors()
 
     override var layout: File {
-        return R.file.pokemonsControllerXml
+        return R.file.pokemonListControllerXml
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -1,12 +1,12 @@
 import ReSwift
 
 struct AppState: StateType {
-    var pokemonsState = PokemonsState()
+    var pokemonListState = PokemonListState()
 }
 
 func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(
-        pokemonsState: pokemonsReducer(action: action, state: state?.pokemonsState)
+        pokemonListState: pokemonListReducer(action: action, state: state?.pokemonListState)
     )
 }
 

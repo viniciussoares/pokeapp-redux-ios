@@ -4,7 +4,7 @@ import Nimble
 @testable import PokeApp
 @testable import Data
 
-final class PokemonsControllerTest: XCTestCase {
+final class PokemonListControllerTest: XCTestCase {
     var controller: PokemonsController!
     var actionsMock: PokemonsActionsMock!
 

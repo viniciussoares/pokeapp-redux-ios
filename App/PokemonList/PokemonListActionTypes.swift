@@ -1,7 +1,7 @@
 import ReSwift
 import Data
 
-enum PokemonsActionTypes {
+enum PokemonListActionTypes {
     struct FetchRequest: Action {}
 
     struct FetchSuccess: Action {

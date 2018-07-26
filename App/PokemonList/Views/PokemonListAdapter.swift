@@ -2,7 +2,7 @@ import UIKit
 import Data
 import UICollectionViewLeftAlignedLayout
 
-final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+final class PokemonListAdapter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
     var collectionView: UICollectionView? {
         didSet { setup() }
     }
@@ -30,7 +30,7 @@ final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionV
         layout.minimumInteritemSpacing = 0
         collectionView.collectionViewLayout = layout
 
-        collectionView.registerLayout(file: R.file.pokemonsCellXml)
+        collectionView.registerLayout(file: R.file.pokemonListCellXml)
     }
 
     private func didSet(oldValue: [Pokemon], newValue: [Pokemon]) {
@@ -44,7 +44,7 @@ final class PokemonsAdapter: NSObject, UICollectionViewDataSource, UICollectionV
     func collectionView(
         _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let (cell, node) = collectionView.dequeueCellData(file: R.file.pokemonsCellXml, indexPath: indexPath)
+        let (cell, node) = collectionView.dequeueCellData(file: R.file.pokemonListCellXml, indexPath: indexPath)
 
         node.setState([
             "pokemon": pokemons[indexPath.row]

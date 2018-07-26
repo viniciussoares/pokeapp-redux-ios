@@ -5,7 +5,7 @@ import RxSwift
 @testable import PokeApp
 @testable import Data
 
-final class PokemonsActionsTest: XCTestCase, ContainerProvider {
+final class PokemonListActionsTest: XCTestCase, ContainerProvider {
     lazy var internalContainer = container.getInternalContainerForTesting()
     lazy var store = container.resolve(AppStore.self)
 

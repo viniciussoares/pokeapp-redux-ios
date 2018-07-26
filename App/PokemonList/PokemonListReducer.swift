@@ -1,19 +1,19 @@
 import ReSwift
 
-func pokemonsReducer(action: Action, state: PokemonsState?) -> PokemonsState {
-    var state = state ?? PokemonsState()
+func pokemonListReducer(action: Action, state: PokemonListState?) -> PokemonListState {
+    var state = state ?? PokemonListState()
 
     switch action {
-    case _ as PokemonsActionTypes.FetchRequest:
+    case _ as PokemonListActionTypes.FetchRequest:
         state.isFetching = true
         state.error = nil
 
-    case let action as PokemonsActionTypes.FetchSuccess:
+    case let action as PokemonListActionTypes.FetchSuccess:
         state.pokemons = action.pokemons
         state.isFetching = false
         state.error = nil
 
-    case let action as PokemonsActionTypes.FetchError:
+    case let action as PokemonListActionTypes.FetchError:
         state.isFetching = false
         state.error = action.error
 

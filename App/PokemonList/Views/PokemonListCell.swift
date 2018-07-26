@@ -1,7 +1,7 @@
 import UIKit
 import Data
 
-final class PokemonsCell: UICollectionViewCell {
+final class PokemonListCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet {
             animateOnHighlight()

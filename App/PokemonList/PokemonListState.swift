@@ -1,7 +1,7 @@
 import ReSwift
 import Data
 
-struct PokemonsState: StateType, AutoEquatable {
+struct PokemonListState: StateType, AutoEquatable {
     var pokemons: [Pokemon] = []
     var isFetching: Bool = false
     var error: Error?

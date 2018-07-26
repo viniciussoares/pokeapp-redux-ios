@@ -1,4 +1,4 @@
-<PokemonsCell>
+<PokemonListCell>
 
     <UIView left="8" top="8" right="100% - 8" bottom="100% - 8">
 
@@ -24,4 +24,4 @@
 
     </UIView>
 
-</PokemonsCell>
+</PokemonListCell>

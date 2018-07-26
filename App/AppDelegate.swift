@@ -16,10 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initMainScreen() {
+        let mainController = PokemonListController()
+
         let navigationController = appContainer.resolve(UINavigationController.self)
         navigationController.isNavigationBarHidden = true
-
-        navigationController.viewControllers = [PokemonsController()]
+        navigationController.viewControllers = [mainController]
 
         window = UIWindow()
         window?.rootViewController = navigationController
