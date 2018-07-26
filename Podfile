@@ -21,6 +21,7 @@ abstract_target 'Common' do
     pod 'Kingfisher'
     pod 'Layout'
     pod 'MaterialComponents/ActivityIndicator'
+    pod 'MaterialComponents/Buttons+ButtonThemer'
     pod 'MaterialComponents/NavigationBar'
     pod 'ReSwift'
     pod 'SwiftyColor'

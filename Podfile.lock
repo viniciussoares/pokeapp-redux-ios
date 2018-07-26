@@ -24,6 +24,16 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - "MaterialComponents/Buttons+ButtonThemer (56.0.0)":
+    - MaterialComponents/Buttons
+    - "MaterialComponents/Buttons+ColorThemer"
+    - "MaterialComponents/Buttons+TypographyThemer"
+  - "MaterialComponents/Buttons+ColorThemer (56.0.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Color
+  - "MaterialComponents/Buttons+TypographyThemer (56.0.0)":
+    - MaterialComponents/Buttons
+    - MaterialComponents/schemes/Typography
   - MaterialComponents/Ink (56.0.0):
     - MaterialComponents/private/Math
   - MaterialComponents/NavigationBar (56.0.0):
@@ -38,6 +48,8 @@ PODS:
   - MaterialComponents/private/Shapes (56.0.0):
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - MaterialComponents/schemes/Color (56.0.0)
+  - MaterialComponents/schemes/Typography (56.0.0)
   - MaterialComponents/ShadowElevations (56.0.0)
   - MaterialComponents/ShadowLayer (56.0.0):
     - MaterialComponents/ShadowElevations
@@ -67,6 +79,7 @@ DEPENDENCIES:
   - Kingfisher
   - Layout
   - MaterialComponents/ActivityIndicator
+  - "MaterialComponents/Buttons+ButtonThemer"
   - MaterialComponents/NavigationBar
   - R.swift
   - ReSwift
@@ -121,6 +134,6 @@ SPEC CHECKSUMS:
   Swinject: f7f15a9672e99328c1f07f277091087917215700
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: c7bc696c702211e82716c61e6bcbbdc7d24b9708
+PODFILE CHECKSUM: c8cdf4401477ff9740fb2f54fcd9f459531b779d
 
 COCOAPODS: 1.5.3

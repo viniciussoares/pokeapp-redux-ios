@@ -1,0 +1,34 @@
+<BackdropView>
+
+    <UIView
+        center.x="parent.center.x"
+        center.y="parent.center.y"
+        height="auto"
+        width="{ipad ? 80% : 95%}">
+
+        <UILabel
+            font="{ipad ? '30 bold' : '22 bold'}"
+            text="Algo deu errado"
+            textAlignment="center"
+            textColor="#354444"
+            width="100%" />
+
+        <UILabel
+            font="{ipad ? '22 regular' : '16 regular'}"
+            numberOfLines="0"
+            text="Cheque sua conexão e tente novamente."
+            textAlignment="center"
+            textColor="#354444"
+            top="previous.bottom + 8"
+            width="100%" />
+
+        <Button
+            center.x="parent.center.x"
+            outlet="retryButton"
+            title="Tentar novamente"
+            top="previous.bottom + 32"
+            width="auto + 20" />
+
+    </UIView>
+
+</BackdropView>
