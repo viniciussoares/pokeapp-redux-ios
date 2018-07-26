@@ -7,8 +7,22 @@ extension UIViewController {
 }
 
 extension UIView {
+
+    private var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+
+        while parentResponder != nil {
+            parentResponder = parentResponder?.next
+            if let viewController = parentResponder as? UIViewController {
+                return viewController
+            }
+        }
+
+        return nil
+    }
+
     func navigate(_ navigation: Navigation) {
-        if let controller = UIApplication.shared.keyWindow?.rootViewController {
+        if let controller = parentViewController {
             container.resolve(Router.self).navigate(navigation, from: controller)
         }
     }
