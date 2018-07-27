@@ -31,6 +31,7 @@
 		8160FD6E210A419400062AD5 /* PokemonSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160FD6D210A419400062AD5 /* PokemonSelectors.swift */; };
 		8160FD70210A435B00062AD5 /* PokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8160FD6F210A435B00062AD5 /* PokemonController.swift */; };
 		8160FD72210A436500062AD5 /* PokemonController.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8160FD71210A436500062AD5 /* PokemonController.xml */; };
+		8160FD76210A468000062AD5 /* GetPokemon.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 8160FD75210A468000062AD5 /* GetPokemon.graphql */; };
 		81686DE5210163EC00B11DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE4210163EC00B11DAB /* AppDelegate.swift */; };
 		81686DE7210163EC00B11DAB /* PokemonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE6210163EC00B11DAB /* PokemonListController.swift */; };
 		81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81686DEB210163EC00B11DAB /* Assets.xcassets */; };
@@ -132,6 +133,7 @@
 		8160FD6D210A419400062AD5 /* PokemonSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSelectors.swift; sourceTree = "<group>"; };
 		8160FD6F210A435B00062AD5 /* PokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonController.swift; sourceTree = "<group>"; };
 		8160FD71210A436500062AD5 /* PokemonController.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PokemonController.xml; sourceTree = "<group>"; };
+		8160FD75210A468000062AD5 /* GetPokemon.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetPokemon.graphql; sourceTree = "<group>"; };
 		81686DE1210163EC00B11DAB /* PokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81686DE4210163EC00B11DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81686DE6210163EC00B11DAB /* PokemonListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListController.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				8112F5112106AF3100538AF6 /* GetPokemons.graphql */,
+				8160FD75210A468000062AD5 /* GetPokemon.graphql */,
 			);
 			path = Query;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8160FD76210A468000062AD5 /* GetPokemon.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

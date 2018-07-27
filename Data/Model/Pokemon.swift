@@ -17,3 +17,9 @@ func pokemonListFromJson(json: JSON) throws -> [Pokemon] {
 
     return try JSONDecoder().decode([Pokemon].self, fromJsonList: pokemonsJson)
 }
+
+func pokemonFromJson(json: JSON) throws -> Pokemon {
+    let pokemonJson = json["pokemon"] as? JSON ?? [:]
+
+    return try JSONDecoder().decode(Pokemon.self, fromJson: pokemonJson)
+}

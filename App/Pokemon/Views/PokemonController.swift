@@ -4,6 +4,7 @@ import Data
 final class PokemonController: LayoutController {
     private(set) var id = ""
 
+    @objc var navigationBar: NavigationBar!
     @objc var activityIndicatorView: ActivityIndicatorView!
     @objc var errorView: ErrorView!
 
@@ -25,7 +26,12 @@ final class PokemonController: LayoutController {
     }
 
     override func layoutDidLoad() {
+        navigationItem.title = "Pokemón"
+        navigationItem.hidesBackButton = false
+        navigationBar.observe(navigationItem)
+
         bag << selectors.observePokemon(id: id).subscribeNext {
+            self.navigationItem.title = $0.name
             print($0)
         }
 

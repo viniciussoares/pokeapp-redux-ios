@@ -22,6 +22,7 @@ public final class DefaultPokemonRepository: PokemonRepository {
     }
 
     public func getPokemon(id: String) -> Observable<Pokemon> {
-        return .empty()
+        let query = GetPokemonQuery(id: id)
+        return api.fetch(query: query).map { try pokemonFromJson(json: $0) }
     }
 }

@@ -55,4 +55,8 @@ final class NavigationBar: UIView {
         materialNavFrame.origin.y = statusBarHeight
         materialNavigationBar.frame = materialNavFrame
     }
+
+    func observe(_ navigationItem: UINavigationItem) {
+        materialNavigationBar.observe(navigationItem)
+    }
 }

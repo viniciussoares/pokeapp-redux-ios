@@ -1,0 +1,8 @@
+query GetPokemon($id: String!) {
+    pokemon(id: $id) {
+        id
+        number
+        name
+        image
+    }
+}
