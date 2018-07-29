@@ -31,13 +31,13 @@ public struct Pokemon: AutoEquatable, Decodable {
         self.image = try container.decode(String.self, forKey: .image)
 
         let typeList = try container.decodeIfPresent([String].self, forKey: .types) ?? []
-        self.type = typeList.isEmpty ? "-" : typeList.reduce("") {  "\($0), \($1)" }
+        self.type = typeList.isEmpty ? "-" : typeList.joined(separator: ", ")
 
         let resistantList = try container.decodeIfPresent([String].self, forKey: .resistant) ?? []
-        self.resistant = resistantList.isEmpty ? "-" : resistantList.reduce("") { "\($0), \($1)" }
+        self.resistant = resistantList.isEmpty ? "-" : resistantList.joined(separator: ", ")
 
         let weaknessesList = try container.decodeIfPresent([String].self, forKey: .weaknesses) ?? []
-        self.weaknesses = weaknessesList.isEmpty ? "-" : weaknessesList.reduce("") { "\($0), \($1)" }
+        self.weaknesses = weaknessesList.isEmpty ? "-" : weaknessesList.joined(separator: ", ")
     }
 }
 

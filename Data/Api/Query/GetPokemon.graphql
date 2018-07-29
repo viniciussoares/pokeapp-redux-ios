@@ -4,6 +4,7 @@ query GetPokemon($id: String!) {
         number
         name
         image
+        types
         height {
             minimum
             maximum
