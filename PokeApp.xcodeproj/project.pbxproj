@@ -37,6 +37,7 @@
 		81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81686DEB210163EC00B11DAB /* Assets.xcassets */; };
 		81686DEF210163EC00B11DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81686DED210163EC00B11DAB /* LaunchScreen.storyboard */; };
 		8171F8AA210E1BB300CB2746 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */; };
+		8171F8AC210E1CD500CB2746 /* Attack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171F8AB210E1CD500CB2746 /* Attack.swift */; };
 		81794EF721095459001A0066 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81794EF621095459001A0066 /* Button.swift */; };
 		81794EFA210955D6001A0066 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81794EF9210955D6001A0066 /* ErrorView.swift */; };
 		81794EFC210955DE001A0066 /* ErrorView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 81794EFB210955DE001A0066 /* ErrorView.xml */; };
@@ -142,6 +143,7 @@
 		81686DEE210163EC00B11DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81686DF0210163EC00B11DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
+		8171F8AB210E1CD500CB2746 /* Attack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attack.swift; sourceTree = "<group>"; };
 		81794EF621095459001A0066 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		81794EF9210955D6001A0066 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		81794EFB210955DE001A0066 /* ErrorView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ErrorView.xml; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				81E49205210176BF0025C44F /* Pokemon.swift */,
+				8171F8AB210E1CD500CB2746 /* Attack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -958,6 +961,7 @@
 				81E49206210176BF0025C44F /* Pokemon.swift in Sources */,
 				8112F5132106AF5B00538AF6 /* GraphlApi.swift in Sources */,
 				81E4921A210180420025C44F /* Sourcery.swift in Sources */,
+				8171F8AC210E1CD500CB2746 /* Attack.swift in Sources */,
 				8112F51E2106B31000538AF6 /* PokemonRepository.swift in Sources */,
 				8112F5182106B06A00538AF6 /* JSON.swift in Sources */,
 				8112F5212106B72000538AF6 /* Dictionary+JSONDecoder.swift in Sources */,

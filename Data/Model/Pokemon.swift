@@ -7,6 +7,7 @@ public struct Pokemon: AutoEquatable, Decodable {
     public var type: String = ""
     public var resistant: String = ""
     public var weaknesses: String = ""
+    public var attacks: Attacks = Attacks()
 
     enum Keys: String, CodingKey {
         case id
@@ -15,6 +16,7 @@ public struct Pokemon: AutoEquatable, Decodable {
         case types
         case resistant
         case weaknesses
+        case attacks
     }
 
     public init(id: String, name: String, image: String) {
@@ -38,6 +40,8 @@ public struct Pokemon: AutoEquatable, Decodable {
 
         let weaknessesList = try container.decodeIfPresent([String].self, forKey: .weaknesses) ?? []
         self.weaknesses = weaknessesList.isEmpty ? "-" : weaknessesList.joined(separator: ", ")
+
+        self.attacks = try container.decodeIfPresent(Attacks.self, forKey: .attacks) ?? Attacks()
     }
 }
 
