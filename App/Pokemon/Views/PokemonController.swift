@@ -14,6 +14,9 @@ final class PokemonController: LayoutController {
     lazy var actions: PokemonActions = DefaultPokemonActions()
     lazy var selectors = PokemonSelectors()
 
+    let fastAttacksAdapter = AttackAdapter()
+    let specialAttacksAdapter = AttackAdapter()
+
     override var layout: File {
         return R.file.pokemonControllerXml
     }
@@ -37,9 +40,15 @@ final class PokemonController: LayoutController {
         navigationItem.hidesBackButton = false
         navigationBar.observe(navigationItem)
 
+        fastAttacksAdapter.tableView = fastAttacksTableView
+        specialAttacksAdapter.tableView = specialAttacksTableView
+
         bag << selectors.observePokemon(id: id).subscribeNext {
-            self.navigationItem.title = $0.name
             self.setState(["pokemon": $0])
+            self.navigationItem.title = $0.name
+            self.fastAttacksAdapter.attacks = $0.attacks.fast
+            self.specialAttacksAdapter.attacks = $0.attacks.special
+            self.layoutNode?.update()
         }
 
         bag << selectors.observeIsFetching().subscribeNext {

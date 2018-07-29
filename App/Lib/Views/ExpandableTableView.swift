@@ -8,10 +8,13 @@ final class ExpandableTableView: UITableView {
     override var intrinsicContentSize: CGSize {
         self.layoutIfNeeded()
 
-        let rows = CGFloat(numberOfRows(inSection: 0))
-        let contentHeight = CGFloat(rowHeight * rows)
+//        let rows = CGFloat(numberOfRows(inSection: 0))
+//        let contentHeight = CGFloat(rowHeight * rows)
+//        let headerHeight = tableHeaderView?.frame.height ?? 0.0
+//        let height = contentHeight + headerHeight
         let headerHeight = tableHeaderView?.frame.height ?? 0.0
-        let height = contentHeight + headerHeight
+        let contentHeight = contentSize.height
+        let height = headerHeight + contentHeight
 
         return CGSize(width: UIViewNoIntrinsicMetric, height: height)
     }
@@ -27,6 +30,47 @@ final class ExpandableTableView: UITableView {
     }
 
     private func setup() {
+        backgroundColor = .clear
         isScrollEnabled = false
+    }
+
+    override func endUpdates() {
+        super.endUpdates()
+        invalidateIntrinsicContentSize()
+    }
+
+    override func reloadData() {
+        super.reloadData()
+        invalidateIntrinsicContentSize()
+    }
+
+    override func reloadRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {
+        super.reloadRows(at: indexPaths, with: animation)
+        invalidateIntrinsicContentSize()
+    }
+
+    override func reloadSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {
+        super.reloadSections(sections, with: animation)
+        invalidateIntrinsicContentSize()
+    }
+
+    override func insertRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {
+        super.insertRows(at: indexPaths, with: animation)
+        invalidateIntrinsicContentSize()
+    }
+
+    override func insertSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {
+        super.insertSections(sections, with: animation)
+        invalidateIntrinsicContentSize()
+    }
+
+    override func deleteRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {
+        super.deleteRows(at: indexPaths, with: animation)
+        invalidateIntrinsicContentSize()
+    }
+
+    override func deleteSections(_ sections: IndexSet, with animation: UITableViewRowAnimation) {
+        super.deleteSections(sections, with: animation)
+        invalidateIntrinsicContentSize()
     }
 }

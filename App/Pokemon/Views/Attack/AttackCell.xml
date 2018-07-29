@@ -1,0 +1,19 @@
+<UITableViewCell backgroundColor="clear" height="40">
+
+    <UILabel
+        font="regular 14"
+        text="{attack.name}"
+        textColor="#919191"
+        height="100%"
+        width="80%" />
+
+    <UILabel
+        font="regular 14"
+        text="{attack.damage}"
+        textAlignment="right"
+        textColor="#D0021B"
+        left="previous.right"
+        height="100%"
+        width="20%" />
+
+</UITableViewCell>
