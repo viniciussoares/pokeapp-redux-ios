@@ -31,7 +31,7 @@
 
         <UILabel
             font="regular 14"
-            text="{pokemon.name}"
+            text="{pokemon.type}"
             textAlignment="center"
             textColor="#919191"
             top="previous.bottom + 4"
@@ -53,7 +53,7 @@
 
         <UILabel
             font="regular 14"
-            text="Water, Electric, Grass, Fighting, Fairy"
+            text="{pokemon.resistant}"
             numberOfLines="0"
             textAlignment="center"
             textColor="#919191"
@@ -76,7 +76,7 @@
 
         <UILabel
             font="regular 14"
-            text="Fire, Ice, Flying, Psychic"
+            text="{pokemon.weaknesses}"
             numberOfLines="0"
             textAlignment="center"
             textColor="#919191"
