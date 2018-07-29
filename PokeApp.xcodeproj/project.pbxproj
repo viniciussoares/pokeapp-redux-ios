@@ -36,6 +36,7 @@
 		81686DE7210163EC00B11DAB /* PokemonListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81686DE6210163EC00B11DAB /* PokemonListController.swift */; };
 		81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81686DEB210163EC00B11DAB /* Assets.xcassets */; };
 		81686DEF210163EC00B11DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81686DED210163EC00B11DAB /* LaunchScreen.storyboard */; };
+		8171F8AA210E1BB300CB2746 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */; };
 		81794EF721095459001A0066 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81794EF621095459001A0066 /* Button.swift */; };
 		81794EFA210955D6001A0066 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81794EF9210955D6001A0066 /* ErrorView.swift */; };
 		81794EFC210955DE001A0066 /* ErrorView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 81794EFB210955DE001A0066 /* ErrorView.xml */; };
@@ -140,6 +141,7 @@
 		81686DEB210163EC00B11DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81686DEE210163EC00B11DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81686DF0210163EC00B11DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
 		81794EF621095459001A0066 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		81794EF9210955D6001A0066 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		81794EFB210955DE001A0066 /* ErrorView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ErrorView.xml; sourceTree = "<group>"; };
@@ -261,11 +263,12 @@
 			isa = PBXGroup;
 			children = (
 				81794EF8210955CD001A0066 /* ErrorView */,
+				813BDE7F21092B5A0020F4F3 /* ActivityIndicatorView.swift */,
 				8112F5232106BA9F00538AF6 /* BackdropView.swift */,
 				81794EF621095459001A0066 /* Button.swift */,
+				8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */,
 				813BDE7B21091DF20020F4F3 /* ImageView.swift */,
 				813BDE7D210922190020F4F3 /* NavigationBar.swift */,
-				813BDE7F21092B5A0020F4F3 /* ActivityIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				81E491F021016A440025C44F /* ReSwift+Rx.swift in Sources */,
 				8125EB4B2108D57500FC69F4 /* PokemonListCell.swift in Sources */,
 				81E4922A2101857B0025C44F /* RxSwift+Sugar.swift in Sources */,
+				8171F8AA210E1BB300CB2746 /* ExpandableTableView.swift in Sources */,
 				81794EF721095459001A0066 /* Button.swift in Sources */,
 				81E4920C21017C1E0025C44F /* Layout+UIKit.swift in Sources */,
 				81E49221210180C60025C44F /* AutoEquatable.generated.swift in Sources */,

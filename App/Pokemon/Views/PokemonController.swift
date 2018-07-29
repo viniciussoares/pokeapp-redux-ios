@@ -6,6 +6,8 @@ final class PokemonController: LayoutController {
 
     @objc var navigationBar: NavigationBar!
     @objc var scrollView: UIScrollView!
+    @objc var fastAttacksTableView: UITableView!
+    @objc var specialAttacksTableView: UITableView!
     @objc var activityIndicatorView: ActivityIndicatorView!
     @objc var errorView: ErrorView!
 

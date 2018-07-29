@@ -44,6 +44,43 @@
 
         <UILabel
             font="bold 12"
+            text="ATTACKS"
+            textAlignment="center"
+            textColor="#146A8A"
+            top="previous.bottom + 24"
+            width="100%" />
+
+        <UILabel
+            font="bold 12"
+            text="FAST"
+            textColor="#146A8A"
+            top="previous.bottom + 14" />
+
+        <ExpandableTableView
+            height="auto"
+            outlet="fastAttacksTableView"
+            top="previous.bottom"
+            width="100%" />
+
+        <UILabel
+            font="bold 12"
+            text="SPECIAL"
+            textColor="#146A8A"
+            top="previous.bottom + 14" />
+
+        <ExpandableTableView
+            height="auto"
+            outlet="specialAttacksTableView"
+            top="previous.bottom"
+            width="100%" />
+
+        <UIView
+            backgroundColor="#ffffff"
+            height="1"
+            top="previous.bottom + 36" />
+
+        <UILabel
+            font="bold 12"
             text="RESISTANT"
             textAlignment="center"
             textColor="#146A8A"
