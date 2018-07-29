@@ -36,6 +36,8 @@ Carthage
 # R.swift & Sourcery
 *.generated.swift
 *.profraw
+App/Lib/Generated
+Data/Lib/Generated
 
 # fastlane
 ModuleCache/

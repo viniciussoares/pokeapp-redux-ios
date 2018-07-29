@@ -4,5 +4,30 @@ query GetPokemon($id: String!) {
         number
         name
         image
+        height {
+            minimum
+            maximum
+        }
+        weight {
+            minimum
+            maximum
+        }
+        attacks {
+            special {
+                name
+                damage
+            }
+            fast {
+                name
+                damage
+            }
+        }
+        evolutions {
+            id
+            name
+            image
+        }
+        resistant
+        weaknesses
     }
 }
