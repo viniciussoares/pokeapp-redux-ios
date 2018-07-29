@@ -5,6 +5,7 @@ final class PokemonController: LayoutController {
     private(set) var id = ""
 
     @objc var navigationBar: NavigationBar!
+    @objc var scrollView: UIScrollView!
     @objc var activityIndicatorView: ActivityIndicatorView!
     @objc var errorView: ErrorView!
 
@@ -13,6 +14,10 @@ final class PokemonController: LayoutController {
 
     override var layout: File {
         return R.file.pokemonControllerXml
+    }
+
+    override var initialState: [String: Any] {
+        return ["pokemon": Pokemon(id: "", name: "", image: "")]
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,10 +37,11 @@ final class PokemonController: LayoutController {
 
         bag << selectors.observePokemon(id: id).subscribeNext {
             self.navigationItem.title = $0.name
-            print($0)
+            self.setState(["pokemon": $0])
         }
 
         bag << selectors.observeIsFetching().subscribeNext {
+            self.scrollView.isHidden = $0
             self.activityIndicatorView.isLoading = $0
         }
 

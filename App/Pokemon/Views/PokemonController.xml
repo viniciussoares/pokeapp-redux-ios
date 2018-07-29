@@ -1,6 +1,90 @@
 <BackdropView>
     <NavigationBar outlet="navigationBar" />
 
+    <UIScrollView
+        bottom="100%"
+        contentInset.top="36"
+        contentInset.left="44"
+        contentInset.right="44"
+        contentInset.bottom="36"
+        outlet="scrollView"
+        top="previous.bottom">
+
+        <ImageView
+            backgroundColor="white"
+            center.x="parent.center.x"
+            url="{pokemon.image}"
+            height="180"
+            layer.borderColor="#E3E3E3"
+            layer.borderWidth="2"
+            layer.cornerRadius="height / 2"
+            width="180" />
+
+        <UILabel
+            font="regular 28"
+            text="{pokemon.name}"
+            textAlignment="center"
+            textColor="#146A8A"
+            top="previous.bottom + 16"
+            numberOfLines="0"
+            width="100%" />
+
+        <UILabel
+            font="regular 14"
+            text="{pokemon.name}"
+            textAlignment="center"
+            textColor="#919191"
+            top="previous.bottom + 4"
+            width="100%" />
+
+        <UIView
+            backgroundColor="#ffffff"
+            height="1"
+            top="previous.bottom + 36" />
+
+        <UILabel
+            font="bold 12"
+            text="RESISTANT"
+            textAlignment="center"
+            textColor="#146A8A"
+            top="previous.bottom + 24"
+            numberOfLines="0"
+            width="100%" />
+
+        <UILabel
+            font="regular 14"
+            text="Water, Electric, Grass, Fighting, Fairy"
+            numberOfLines="0"
+            textAlignment="center"
+            textColor="#919191"
+            top="previous.bottom + 12"
+            width="100%" />
+
+        <UIView
+            backgroundColor="#ffffff"
+            height="1"
+            top="previous.bottom + 36" />
+
+        <UILabel
+            font="bold 12"
+            text="WEAKNESSES"
+            textAlignment="center"
+            textColor="#146A8A"
+            top="previous.bottom + 24"
+            numberOfLines="0"
+            width="100%" />
+
+        <UILabel
+            font="regular 14"
+            text="Fire, Ice, Flying, Psychic"
+            numberOfLines="0"
+            textAlignment="center"
+            textColor="#919191"
+            top="previous.bottom + 12"
+            width="100%" />
+
+    </UIScrollView>
+
     <ActivityIndicatorView outlet="activityIndicatorView" />
     <ErrorView outlet="errorView" />
 </BackdropView>
