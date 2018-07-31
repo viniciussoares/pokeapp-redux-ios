@@ -17,7 +17,11 @@ final class PokemonListControllerTest: XCTestCase {
 
         _ = controller.view
 
-        state = AppState()
+        setState(PokemonListState())
+    }
+
+    func setState(_ value: PokemonListState) {
+        UIApplication.container.resolve(AppStore.self)!.state.pokemonListState = value
     }
 
     override func tearDown() {
@@ -25,27 +29,21 @@ final class PokemonListControllerTest: XCTestCase {
         controller = nil
     }
 
-    func testViewsIsNotNil() {
-        XCTAssertNotNil(controller.collectionView)
-        XCTAssertNotNil(controller.errorView)
-        XCTAssertNotNil(controller.activityIndicatorView)
-    }
-
     func testInitialState() {
-        state.pokemonListState = PokemonListState()
+        setState(PokemonListState())
 
         expect(self.controller.activityIndicatorView.isHidden).to(beTrue())
         expect(self.controller.errorView.isHidden).to(beTrue())
     }
 
     func testShowLoading() {
-        state.pokemonListState = PokemonListState(pokemons: [], isFetching: true, error: nil)
+        setState(PokemonListState(pokemons: [], isFetching: true, error: nil))
 
         expect(self.controller.activityIndicatorView.isHidden).to(beFalse())
     }
 
     func testShowError() {
-        state.pokemonListState = PokemonListState(pokemons: [], isFetching: false, error: TestingError.dummy)
+        setState(PokemonListState(pokemons: [], isFetching: false, error: TestingError.dummy))
 
         expect(self.controller.errorView.isHidden).to(beFalse())
     }
@@ -56,7 +54,7 @@ final class PokemonListControllerTest: XCTestCase {
             Pokemon(id: "2", name: "Test 2", image: "http://www.test.com/2.jpg")
         ]
 
-        state.pokemonListState = PokemonListState(pokemons: pokemons, isFetching: false, error: nil)
+        setState(PokemonListState(pokemons: pokemons, isFetching: false, error: nil))
 
         let collectionView = controller.collectionView!
         let dataSource = collectionView.dataSource!
