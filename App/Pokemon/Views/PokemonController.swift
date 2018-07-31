@@ -1,5 +1,6 @@
 import UIKit
 import Data
+import MaterialComponents
 
 final class PokemonController: LayoutController {
     private(set) var id = ""
@@ -39,7 +40,7 @@ final class PokemonController: LayoutController {
 
     override func layoutDidLoad() {
         navigationItem.title = "Pokemón"
-        navigationItem.hidesBackButton = false
+        navigationItem.leftBarButtonItem = BackBarButtonItem(parent: self)
         navigationBar.observe(navigationItem)
 
         fastAttacksAdapter.tableView = fastAttacksTableView

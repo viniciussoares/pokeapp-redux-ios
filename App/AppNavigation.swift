@@ -11,4 +11,8 @@ struct AppNavigation: AppNavigationType {
     func navigate(_ navigation: Navigation, from: UIViewController, to: UIViewController) {
         from.navigationController?.pushViewController(to, animated: true)
     }
+
+    func goBack(from: UIViewController) {
+        _ = from.navigationController?.popViewController(animated: true)
+    }
 }

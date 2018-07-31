@@ -75,6 +75,7 @@
 		81E5702F210168DC008F0467 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5702E210168DC008F0467 /* Router.swift */; };
 		81ECE41A210FED76004AF680 /* EvolutionsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ECE419210FED76004AF680 /* EvolutionsAdapter.swift */; };
 		81ECE41C210FED8A004AF680 /* EvolutionsCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 81ECE41B210FED8A004AF680 /* EvolutionsCell.xml */; };
+		81ECE41E210FF5BB004AF680 /* BackBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ECE41D210FF5BB004AF680 /* BackBarButtonItem.swift */; };
 		81FF026A2103F29800ADBB5F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF02692103F29800ADBB5F /* Navigation.swift */; };
 		81FF026C2103F30900ADBB5F /* Router+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF026B2103F30900ADBB5F /* Router+UIKit.swift */; };
 /* End PBXBuildFile section */
@@ -186,6 +187,7 @@
 		81E5702E210168DC008F0467 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		81ECE419210FED76004AF680 /* EvolutionsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionsAdapter.swift; sourceTree = "<group>"; };
 		81ECE41B210FED8A004AF680 /* EvolutionsCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EvolutionsCell.xml; sourceTree = "<group>"; };
+		81ECE41D210FF5BB004AF680 /* BackBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBarButtonItem.swift; sourceTree = "<group>"; };
 		81FF02692103F29800ADBB5F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		81FF026B2103F30900ADBB5F /* Router+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+UIKit.swift"; sourceTree = "<group>"; };
 		87AAEF2CB6F704AB976FD5DF /* Pods-Common-PokeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-PokeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-PokeApp/Pods-Common-PokeApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				81794EF8210955CD001A0066 /* ErrorView */,
 				813BDE7F21092B5A0020F4F3 /* ActivityIndicatorView.swift */,
+				81ECE41D210FF5BB004AF680 /* BackBarButtonItem.swift */,
 				8112F5232106BA9F00538AF6 /* BackdropView.swift */,
 				81794EF621095459001A0066 /* Button.swift */,
 				8171F8A9210E1BB300CB2746 /* ExpandableTableView.swift */,
@@ -932,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E491F021016A440025C44F /* ReSwift+Rx.swift in Sources */,
+				81ECE41E210FF5BB004AF680 /* BackBarButtonItem.swift in Sources */,
 				8125EB4B2108D57500FC69F4 /* PokemonListCell.swift in Sources */,
 				81E4922A2101857B0025C44F /* RxSwift+Sugar.swift in Sources */,
 				8171F8AA210E1BB300CB2746 /* ExpandableTableView.swift in Sources */,
