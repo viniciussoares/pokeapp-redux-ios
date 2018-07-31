@@ -8,10 +8,6 @@ final class ExpandableTableView: UITableView {
     override var intrinsicContentSize: CGSize {
         self.layoutIfNeeded()
 
-//        let rows = CGFloat(numberOfRows(inSection: 0))
-//        let contentHeight = CGFloat(rowHeight * rows)
-//        let headerHeight = tableHeaderView?.frame.height ?? 0.0
-//        let height = contentHeight + headerHeight
         let headerHeight = tableHeaderView?.frame.height ?? 0.0
         let contentHeight = contentSize.height
         let height = headerHeight + contentHeight

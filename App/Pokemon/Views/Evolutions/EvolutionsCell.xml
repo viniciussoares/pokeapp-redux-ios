@@ -1,0 +1,32 @@
+<UICollectionViewCell>
+
+    <ImageView
+        backgroundColor="white"
+        url="{pokemon.image}"
+        height="70"
+        id="image"
+        layer.borderColor="#E3E3E3"
+        layer.borderWidth="2"
+        layer.cornerRadius="35"
+        width="70" />
+
+    <UILabel
+        font="regular 14"
+        text="{pokemon.name}"
+        textAlignment="center"
+        textColor="#919191"
+        top="previous.bottom + 8"
+        width="previous.width" />
+
+    <UILabel
+        bottom="#image.bottom"
+        font="regular 18"
+        left="#image.right + 16"
+        text=">"
+        isHidden="{isLast}"
+        textAlignment="center"
+        textColor="#757575"
+        top="#image.top"
+        width="16" />
+
+</UICollectionViewCell>

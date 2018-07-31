@@ -73,6 +73,8 @@
 		81E57008210164C8008F0467 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E57001210164C8008F0467 /* Data.framework */; };
 		81E57009210164C8008F0467 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81E57001210164C8008F0467 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81E5702F210168DC008F0467 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E5702E210168DC008F0467 /* Router.swift */; };
+		81ECE41A210FED76004AF680 /* EvolutionsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ECE419210FED76004AF680 /* EvolutionsAdapter.swift */; };
+		81ECE41C210FED8A004AF680 /* EvolutionsCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = 81ECE41B210FED8A004AF680 /* EvolutionsCell.xml */; };
 		81FF026A2103F29800ADBB5F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF02692103F29800ADBB5F /* Navigation.swift */; };
 		81FF026C2103F30900ADBB5F /* Router+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF026B2103F30900ADBB5F /* Router+UIKit.swift */; };
 /* End PBXBuildFile section */
@@ -182,6 +184,8 @@
 		81E57003210164C8008F0467 /* Graphql.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graphql.h; sourceTree = "<group>"; };
 		81E57004210164C8008F0467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E5702E210168DC008F0467 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		81ECE419210FED76004AF680 /* EvolutionsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionsAdapter.swift; sourceTree = "<group>"; };
+		81ECE41B210FED8A004AF680 /* EvolutionsCell.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EvolutionsCell.xml; sourceTree = "<group>"; };
 		81FF02692103F29800ADBB5F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		81FF026B2103F30900ADBB5F /* Router+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+UIKit.swift"; sourceTree = "<group>"; };
 		87AAEF2CB6F704AB976FD5DF /* Pods-Common-PokeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-PokeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-PokeApp/Pods-Common-PokeApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -394,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				8171F8AD210E1DBE00CB2746 /* Attack */,
+				81ECE418210FED55004AF680 /* Evolutions */,
 				8160FD6F210A435B00062AD5 /* PokemonController.swift */,
 				8160FD71210A436500062AD5 /* PokemonController.xml */,
 			);
@@ -540,6 +545,15 @@
 			path = Ext;
 			sourceTree = "<group>";
 		};
+		81ECE418210FED55004AF680 /* Evolutions */ = {
+			isa = PBXGroup;
+			children = (
+				81ECE419210FED76004AF680 /* EvolutionsAdapter.swift */,
+				81ECE41B210FED8A004AF680 /* EvolutionsCell.xml */,
+			);
+			path = Evolutions;
+			sourceTree = "<group>";
+		};
 		DFA0C75F4F778D97FD36CD65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81686DEF210163EC00B11DAB /* LaunchScreen.storyboard in Resources */,
+				81ECE41C210FED8A004AF680 /* EvolutionsCell.xml in Resources */,
 				8160FD72210A436500062AD5 /* PokemonController.xml in Resources */,
 				81E4921521017DA60025C44F /* PokemonListController.xml in Resources */,
 				81686DEC210163EC00B11DAB /* Assets.xcassets in Resources */,
@@ -943,6 +958,7 @@
 				81E4921721017DD60025C44F /* R.generated.swift in Sources */,
 				817ECA222103D5FB00E20A22 /* PokemonListSelectors.swift in Sources */,
 				813BDE7C21091DF20020F4F3 /* ImageView.swift in Sources */,
+				81ECE41A210FED76004AF680 /* EvolutionsAdapter.swift in Sources */,
 				81FF026C2103F30900ADBB5F /* Router+UIKit.swift in Sources */,
 				81E4920D21017C4D0025C44F /* Rswift+File.swift in Sources */,
 				81E49202210171E00025C44F /* PokemonListReducer.swift in Sources */,

@@ -8,6 +8,7 @@ final class PokemonController: LayoutController {
     @objc var scrollView: UIScrollView!
     @objc var fastAttacksTableView: UITableView!
     @objc var specialAttacksTableView: UITableView!
+    @objc var evolutionsCollectionView: UICollectionView!
     @objc var activityIndicatorView: ActivityIndicatorView!
     @objc var errorView: ErrorView!
 
@@ -16,6 +17,7 @@ final class PokemonController: LayoutController {
 
     let fastAttacksAdapter = AttackAdapter()
     let specialAttacksAdapter = AttackAdapter()
+    let evolutionsAdapter = EvolutionsAdapter()
 
     override var layout: File {
         return R.file.pokemonControllerXml
@@ -42,12 +44,14 @@ final class PokemonController: LayoutController {
 
         fastAttacksAdapter.tableView = fastAttacksTableView
         specialAttacksAdapter.tableView = specialAttacksTableView
+        evolutionsAdapter.collectionView = evolutionsCollectionView
 
         bag << selectors.observePokemon(id: id).subscribeNext {
             self.setState(["pokemon": $0])
             self.navigationItem.title = $0.name
             self.fastAttacksAdapter.attacks = $0.attacks.fast
             self.specialAttacksAdapter.attacks = $0.attacks.special
+            self.evolutionsAdapter.pokemons = $0.evolutions
             self.layoutNode?.update()
         }
 

@@ -81,6 +81,26 @@
 
         <UILabel
             font="bold 12"
+            text="EVOLUTIONS"
+            textAlignment="center"
+            textColor="#146A8A"
+            top="previous.bottom + 24"
+            numberOfLines="0"
+            width="100%" />
+
+        <UICollectionView
+            backgroundColor="clear"
+            height="120"
+            top="previous.bottom + 12"
+            outlet="evolutionsCollectionView" />
+
+        <UIView
+            backgroundColor="#ffffff"
+            height="1"
+            top="previous.bottom + 24" />
+
+        <UILabel
+            font="bold 12"
             text="RESISTANT"
             textAlignment="center"
             textColor="#146A8A"
