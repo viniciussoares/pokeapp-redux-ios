@@ -82,7 +82,3 @@ final class PokemonListControllerTest: XCTestCase {
         expect(self.actionsMock.getPokemonsCalled).to(beTrue())
     }
 }
-
-enum TestingError: Error {
-    case dummy
-}
