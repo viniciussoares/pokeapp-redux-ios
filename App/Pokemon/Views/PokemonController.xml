@@ -90,9 +90,14 @@
 
         <UICollectionView
             backgroundColor="clear"
+            contentInset.left="44"
+            contentInset.right="44"
             height="120"
-            top="previous.bottom + 12"
-            outlet="evolutionsCollectionView" />
+            left="-44"
+            outlet="evolutionsCollectionView"
+            right="100% + 44"
+            showsHorizontalScrollIndicator="false"
+            top="previous.bottom + 12" />
 
         <UIView
             backgroundColor="#ffffff"
