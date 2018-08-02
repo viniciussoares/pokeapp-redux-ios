@@ -49,9 +49,7 @@ fastlane/README.md
 
 # Yarn & NPM
 node_modules/
-
 .build/config
-info.plist
 *.orig
 
 # GraphQL

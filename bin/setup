@@ -10,4 +10,4 @@ bundle exec pod install
 printf "\n[2/2] 📄  Download GraphQL schema...\n\n"
 yarn download-schema
 
-printf "\n${GREEN}success${CLEAR}n"
+printf "\n${GREEN}success"
